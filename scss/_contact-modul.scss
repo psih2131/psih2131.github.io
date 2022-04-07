@@ -1,0 +1,144 @@
+.contact-modul{
+	position: fixed;
+	right: 100px;
+	bottom: 100px;
+	z-index: 1111;
+}
+.contact-modul__solial-conteiner{
+	display: none;
+	width: 40px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.contact-modul__sitial-box{
+	width: 30px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 15px;
+
+	svg{
+		width: 100%;
+		height: auto;
+		transition: all ease 0.3s;
+
+		path{
+			transition: all ease 0.3s;
+		}
+
+		&:hover{
+			transform: scale(1.3);
+
+			path{
+				fill: $dopColor;
+			}
+		}
+	}
+}
+.cont-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+  	border-radius: 100%;
+}
+.cont-btn__bg{
+	width: 1px;
+	height: 1px;
+	background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	z-index: 1110;
+	opacity: 0;
+	transition: all ease 0.5s;
+	right: 100px;
+	bottom: 100px;
+}
+.act-bg{
+	width: 100%;
+	height: 100%;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+}
+.cont-btn_anim{
+	animation: radial-pulse 3s infinite;
+}
+@keyframes radial-pulse{
+0% { 
+	box-shadow: 0 0 0 0px rgba(140,100,255,0.5); 
+}  
+   
+ 100% { 
+ 	box-shadow: 0 0 0 40px rgba(198,245,198,0); 
+ }
+}
+.cont-btn__element{
+	width: 100%;
+	position: absolute;
+	transition: all ease 0.3s;
+	z-index: 10;
+
+	svg{
+		width: 100%;
+		display: block;
+
+		path{
+			transition: all ease 0.3s;
+		}
+	}
+
+}
+.cont-btn__activ{
+	opacity: 0;
+}
+
+@media only screen and (max-width: 1385px){
+.contact-modul{
+	right: 50px;
+	bottom: 130px;
+}
+.cont-btn__bg{
+	right: 50px;
+	bottom: 130px;
+}
+.act-bg{
+	right: 0;
+	bottom: 0;
+}
+}
+@media only screen and (max-width: 800px){
+	.contact-modul{
+		bottom: 55px;
+		right: 35px;
+	}
+	.cont-btn__bg{
+		bottom: 55px;
+		right: 35px;
+	}
+	.act-bg{
+		right: 0;
+		bottom: 0;
+	}
+}
+@media only screen and (max-width: 900px) and (max-height: 500px) and (orientation: landscape){
+.contact-modul__solial-conteiner{
+	width: auto;
+}
+.contact-modul__sitial-box{
+	display: inline-block;
+	margin-bottom: 0;
+	margin-right: 10px;
+}
+.contact-modul{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.contact-modul{
+	bottom: 50px;
+}
+}
+
+
